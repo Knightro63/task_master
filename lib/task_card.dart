@@ -180,7 +180,7 @@ class CreateTaskCard extends StatelessWidget {
         priority.add(Container(
             margin: EdgeInsets.only(left: i * 12.0),
             child:
-                const Icon(Icons.flutter_dash, color: Colors.red, size: 15)));
+                const Icon(Icons.flutter_dash, color: Colors.red, size: 13)));
       }
 
       if (priority.isEmpty) {

@@ -9,14 +9,22 @@ class Database {
     dynamic jsonData = jsonDecode(
       await rootBundle.loadString('assets/${children[0]}.json')
     );
-    if(child.length == 2){
-      return jsonData[children[1]];
+    
+    if(children.length == 2){
+      if(jsonData[children[1]] != null){
+        return jsonData[children[1]];
+      }
     }
-    else if(child.length == 3){
+    else if(children.length == 3){
       return jsonData[children[1]][children[2]];
     }
-    else if(child.length == 4){
-      return jsonData[children[1]][children[2]][children[3]];
+    else if(children.length == 4){
+      if(jsonData[children[1]][children[2]] == null){
+        return null;
+      }
+      else{
+        return jsonData[children[1]][children[2]][children[3]];
+      }
     }
     else{
       return jsonData;

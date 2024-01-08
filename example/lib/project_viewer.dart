@@ -10,7 +10,7 @@ class ProjectViewer extends StatefulWidget {
     required this.epic,
     this.onTap,
     this.labels,
-    this.startProject
+    this.startProject,
   }):super(key: key);
 
   final double width;
@@ -28,7 +28,7 @@ class _ProjectViewerState extends State<ProjectViewer> {
   dynamic completedData = {};
   String child = '';
   String currentEpic = '';
-  dynamic labelData;
+  dynamic labelData = {};
   @override
   void initState() {
     start();
@@ -46,7 +46,6 @@ class _ProjectViewerState extends State<ProjectViewer> {
     currentEpic = widget.epic;
     managemntData = {};
     child = 'department/$currentEpic';
-    labelData = widget.labels;
   }
 
   // Listener to montior changes in database and update/reset application accordingly
@@ -81,9 +80,17 @@ class _ProjectViewerState extends State<ProjectViewer> {
     List<ProjectData> data = [];
     if (managemntData != {}) {
       for (String key in managemntData!.keys) {
-        if (key != 'title') {
-          if (managemntData![key]['complete'] == null) {
-            data.add(ProjectData.fromJSON(managemntData![key], key));
+        //print('project_viewer -> projectData Key: $key');
+        dynamic projectData = managemntData[key];
+
+        if(projectData != null){
+          for(String key1 in projectData.keys){
+            //print('project_viewer -> projectData Key1: $key1');
+            if (key1 == 'project') { //if (key != 'title') {
+              if (projectData['complete'] == null) {
+                data.add(ProjectData.fromJSON(projectData[key1], key));
+              }
+            }
           }
         }
       }
@@ -93,6 +100,17 @@ class _ProjectViewerState extends State<ProjectViewer> {
 
   @override
   Widget build(BuildContext context) {
+    if(widget.labels == null){
+      Database.once('label/$currentEpic').then((val) {
+        labelData = val;
+
+        setState(() {});
+      });
+    }
+    else {
+      labelData = widget.labels;
+    }
+
     return ProjectManager(
       labels: labelData,
       height: widget.height,
@@ -108,43 +126,44 @@ class _ProjectViewerState extends State<ProjectViewer> {
       },
       onSubmitLabel: (data) {
         String location = DateTime.now().microsecondsSinceEpoch.toString();
-        labelData[currentEpic][location] = data;
+        labelData[location] = data;
         setState(() {});
       },
       onUpdateLabel: (data, location) {
-        labelData[currentEpic][location] = data;
+        labelData[location] = data;
         setState(() {});
       },
       onDeleteLabel: (location) {
-        labelData[currentEpic][location] = null;
+        labelData[location] = null;
         setState(() {});
       },
       onSubmit: (title, image, date, color) async {
-        managemntData[DateTime.now().millisecondsSinceEpoch.toString()] = {
-          'department': currentEpic,
+        managemntData[DateTime.now().millisecondsSinceEpoch.toString()] = {'project':
+        {  'department': currentEpic,
           'createdBy': "example",
           'dateCreated': DateTime.now().toString(),
           'dueDate': (date != '') ? date : null,
           'title': title,
           'image': (image == ' ') ? 'temp' : image,
-          'color': color,
+          'color': color,}
         };
-        setState(() {});
+        setState(() { });
       },
       onUpdate: (title, image, date, color, project) async {
-        managemntData[project]['dueDate'] = (date != '') ? date : null;
-        managemntData[project]['title'] = title;
-        managemntData[project]['image'] = (image == ' ') ? 'temp' : image;
-        managemntData[project]['color'] = color;
+        managemntData[project]['project']['dueDate'] = (date != '') ? date : null;
+        managemntData[project]['project']['title'] = title;
+        managemntData[project]['project']['image'] = (image == ' ') ? 'temp' : image;
+        managemntData[project]['project']['color'] = color;
         setState(() {});
       },
       onComplete: (project) async {
-        completedData[project] = {
+        managemntData[project]['complete'] = {
           "completedDate": DateTime.now().toString(),
-          "createdBy": managemntData[project]['createdBy'],
-          "dueDate": managemntData[project]['dueDate'],
-          "title": managemntData[project]['title']
+          "createdBy": managemntData[project]['project']['createdBy'],
+          "dueDate": managemntData[project]['project']['dueDate'],
+          "title": managemntData[project]['project']['title']
         };
+        print(managemntData[project]['complete']);
         setState(() {});
       },
       onProjectDelete: (id) {

@@ -312,6 +312,7 @@ class _ProjectManagerState extends State<ProjectManager> {
     for (int i = 0; i < numOfPro; i++) {
       projects.add(InkWell(
         onLongPress: () {
+          editProject = widget.projectData[i].id;
           setUpdateData(i);
           showDialog(
               context: context,
