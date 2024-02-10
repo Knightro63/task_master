@@ -40,18 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
   dynamic users;
   dynamic labels;
   dynamic completeData;
+  Size size = Size(0,0);
 
   @override
   void initState() {
-    super.initState();
     start();
+    super.initState();
   }
 
   void start() async {
     firebaseReset();
     await Database.once('users').then((val) {
       users = val;
-      print(users);
+      //print(users);
       setState(() {});
     });
 
@@ -75,33 +76,39 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    if(size != MediaQuery.of(context).size){
+      setState(() {
+        size = MediaQuery.of(context).size;
+      });
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
           ProjectViewer(
-            labels: labels == null ? null : labels['GitHub'],
+            labels: labels == null ? null: labels['GitHub'],
             width: 300,
-            height: MediaQuery.of(context).size.height,
+            height: size.height,
             epic: 'GitHub',
             onTap: (val) async {
               setState(() {
                 selectedProject = val;
               });
-            }
+            },
           ),
           if (users != null) Align(
             alignment: Alignment.centerRight,
-            child: BoardViewer(
+            child: (selectedProject != '')?BoardViewer(
               completedData: completeData,
               labels: labels == null ? null : labels['GitHub'],
               epic: 'GitHub',
               project: selectedProject,
               currentUID: currentUID,
               users: users!,
-              width: MediaQuery.of(context).size.width - 300,
-              height: MediaQuery.of(context).size.height
-            )
+              width: size.width - 300,
+              height: size.height
+            ):Container(width: size.width - 300,color: Theme.of(context).canvasColor)
           )
         ],
       )

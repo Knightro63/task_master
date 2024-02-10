@@ -895,9 +895,7 @@ class _BoardManagerState extends State<BoardManager> {
         List<Widget> label = [];
         if (labelData != null) {
           for (String key in labelData.keys) {
-            if (labelData[key] == null) {
-              setState(() {});
-            }
+            if (labelData[key] == null) continue;
             Color textColor =
                 Color(labelData[key]['color']).computeLuminance() > 0.5
                     ? Colors.black
@@ -1651,7 +1649,7 @@ class _BoardManagerState extends State<BoardManager> {
                                             radius: 45 / 2,
                                             width:
                                                 responsive(width: width) / 3 -
-                                                    15,
+                                                    10,
                                           )
                                         : Container(),
                                     (!isNewCard && isEditor())
@@ -1701,7 +1699,7 @@ class _BoardManagerState extends State<BoardManager> {
                                           .color!,
                                       height: 45,
                                       radius: 45 / 2,
-                                      width: responsive(width: width) / 3 - 15,
+                                      width: responsive(width: width) / 3 - 10,
                                     )
                                   ])
                             ])

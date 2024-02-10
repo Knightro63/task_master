@@ -19,9 +19,9 @@ class UserData {
   final String? credentials;
 
   /// Used to convert JSON data to UserData object
-  factory UserData.fromJSON(Map<String, dynamic> data) {
+  factory UserData.fromJSON(Map<String, dynamic> data, String uid) {
     return UserData(
-      uid: data['uid'] ?? '',
+      uid: uid,
       displayName: data['displayName'] ?? '',
       imageUrl: data['imageURL'] as String?,
       credentials: data['credentials'] as String?
