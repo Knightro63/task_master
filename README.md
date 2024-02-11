@@ -26,7 +26,7 @@ Projects:
 - Mark a project as complete
 - Add due date
 
-![Picture of the task manager UI](https://github.com/Knightro63/task_master/blob/main/docs/TProject%20Creation.gif)
+![Picture of the task manager UI](https://github.com/Knightro63/task_master/blob/main/docs/Project%20Creation.gif)
 
 Boards:
 - Drag boards to change their order
