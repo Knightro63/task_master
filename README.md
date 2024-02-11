@@ -15,20 +15,24 @@ and the Flutter guide for
 
 Use this package to implement a task management system in your Flutter application.
 
-![Picture of the task manager UI](./docs/Task%20Manager.png)
+![Picture of the task manager UI](https://github.com/Knightro63/task_master/tree/main/docs/Task%20Manager.png)
 
 # Features
 
-[* See implementation in example app *](./example/README.md)
+[* See implementation in example app *](https://github.com/Knightro63/task_master/tree/main/example/README.md)
 
 Projects:
 - Create Boards to keep track of progress 
 - Mark a project as complete
 - Add due date
 
+![Picture of the task manager UI](https://github.com/Knightro63/task_master/tree/main/docs/TProject%20Creation.gif)
+
 Boards:
 - Drag boards to change their order
 - Drag cards in between boards to track progress
+
+![Picture of the task manager UI](https://github.com/Knightro63/task_master/tree/main/docs/Board%20Drag.gif)
 
 Task Cards:
 - Add due dates
@@ -39,6 +43,7 @@ Task Cards:
 - Incentivize with points
 - Change priority
 
+![Picture of the task manager UI](https://github.com/Knightro63/task_master/tree/main/docs/Task%20Completion.gif)
 
 # Getting started
 
@@ -204,12 +209,10 @@ onSubmit: (title, image, date, color) async {
 
 ## Example
 
-Find the example for this package [here]()
+Find the example for this package [here](https://github.com/Knightro63/task_master/tree/main/example/lib/main.dart)
 
 ## Contributing
 
-Contributions are welcome. In case of any problems look at [existing issues](), if you cannot find anything related to your problem then open an issue. Create an issue before opening a [pull request]() for non trivial fixes. In case of trivial fixes open a [pull request]() directly.
-
-## Additional information
+Contributions are welcome. In case of any problems look at [existing issues](https://github.com/Knightro63/task_master/issues), if you cannot find anything related to your problem then open an issue. Create an issue before opening a [pull request](https://github.com/Knightro63/task_master/pulls) for non trivial fixes. In case of trivial fixes open a [pull request](https://github.com/Knightro63/task_master/pulls) directly.
 
 
