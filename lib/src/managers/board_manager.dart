@@ -751,7 +751,7 @@ class _BoardManagerState extends State<BoardManager> {
                         style: TextStyle(
                             color: Theme.of(context)
                                 .primaryTextTheme
-                                .subtitle1!
+                                .titleSmall!
                                 .color,
                             fontSize: 14,
                             fontFamily: 'Klavika Bold',
@@ -764,7 +764,7 @@ class _BoardManagerState extends State<BoardManager> {
                         style: TextStyle(
                             color: Theme.of(context)
                                 .primaryTextTheme
-                                .subtitle1!
+                                .titleSmall!
                                 .color,
                             fontSize: 12,
                             fontFamily: 'MeuseoSans',
@@ -819,7 +819,7 @@ class _BoardManagerState extends State<BoardManager> {
                           style: TextStyle(
                               color: Theme.of(context)
                                   .primaryTextTheme
-                                  .subtitle1!
+                                  .titleSmall!
                                   .color,
                               fontSize: 14,
                               fontFamily: 'Klavika Bold',
@@ -832,7 +832,7 @@ class _BoardManagerState extends State<BoardManager> {
                           style: TextStyle(
                               color: Theme.of(context)
                                   .primaryTextTheme
-                                  .subtitle1!
+                                  .titleSmall!
                                   .color,
                               fontSize: 12,
                               fontFamily: 'MeuseoSans',
@@ -1045,7 +1045,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                           color: Theme.of(
                                                                   context)
                                                               .primaryTextTheme
-                                                              .bodyText2!
+                                                              .bodyMedium!
                                                               .color,
                                                           fontFamily: 'Klavika',
                                                           package: 'css',
@@ -1153,7 +1153,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                                   color: Theme.of(
                                                                           context)
                                                                       .primaryTextTheme
-                                                                      .bodyText2!
+                                                                      .bodyMedium!
                                                                       .color,
                                                                   fontFamily:
                                                                       'Klavika',
@@ -1179,7 +1179,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                           color: Theme.of(
                                                                   context)
                                                               .primaryTextTheme
-                                                              .bodyText2!
+                                                              .bodyMedium!
                                                               .color,
                                                           fontFamily: 'Klavika',
                                                           package: 'css',
@@ -1277,7 +1277,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                   TextStyle(
                                                       color: Theme.of(context)
                                                           .primaryTextTheme
-                                                          .bodyText2!
+                                                          .bodyMedium!
                                                           .color,
                                                       fontFamily: 'Klavika',
                                                       package: 'css',
@@ -1341,7 +1341,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                         size: 30,
                                                         color: Theme.of(context)
                                                             .primaryTextTheme
-                                                            .bodyText2!
+                                                            .bodyMedium!
                                                             .color,
                                                       ),
                                                     ),
@@ -1360,7 +1360,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                   TextStyle(
                                                       color: Theme.of(context)
                                                           .primaryTextTheme
-                                                          .bodyText2!
+                                                          .bodyMedium!
                                                           .color,
                                                       fontFamily: 'Klavika',
                                                       package: 'css',
@@ -1424,7 +1424,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                         size: 30,
                                                         color: Theme.of(context)
                                                             .primaryTextTheme
-                                                            .bodyText2!
+                                                            .bodyMedium!
                                                             .color,
                                                       ),
                                                     ),
@@ -1442,7 +1442,7 @@ class _BoardManagerState extends State<BoardManager> {
                                           TextStyle(
                                               color: Theme.of(context)
                                                   .primaryTextTheme
-                                                  .bodyText2!
+                                                  .bodyMedium!
                                                   .color,
                                               fontFamily: 'Klavika',
                                               package: 'css',
@@ -1476,7 +1476,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                     : Icons.clear_outlined,
                                                 color: Theme.of(context)
                                                     .primaryTextTheme
-                                                    .bodyText2!
+                                                    .bodyMedium!
                                                     .color,
                                                 size: 20,
                                               ),
@@ -1488,7 +1488,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                 TextStyle(
                                                     color: Theme.of(context)
                                                         .primaryTextTheme
-                                                        .bodyText2!
+                                                        .bodyMedium!
                                                         .color,
                                                     fontFamily: 'Klavika',
                                                     package: 'css',
@@ -1528,7 +1528,7 @@ class _BoardManagerState extends State<BoardManager> {
                                               size: 30,
                                               color: Theme.of(context)
                                                   .primaryTextTheme
-                                                  .bodyText2!
+                                                  .bodyMedium!
                                                   .color,
                                             ),
                                           ),
@@ -1558,7 +1558,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                     : Icons.clear_outlined,
                                                 color: Theme.of(context)
                                                     .primaryTextTheme
-                                                    .bodyText2!
+                                                    .bodyMedium!
                                                     .color,
                                                 size: 20,
                                               ),
@@ -1570,7 +1570,7 @@ class _BoardManagerState extends State<BoardManager> {
                                                 TextStyle(
                                                     color: Theme.of(context)
                                                         .primaryTextTheme
-                                                        .bodyText2!
+                                                        .bodyMedium!
                                                         .color,
                                                     fontFamily: 'Klavika',
                                                     package: 'css',
@@ -1609,7 +1609,7 @@ class _BoardManagerState extends State<BoardManager> {
                                               size: 30,
                                               color: Theme.of(context)
                                                   .primaryTextTheme
-                                                  .bodyText2!
+                                                  .bodyMedium!
                                                   .color,
                                             ),
                                           ),
@@ -1643,7 +1643,7 @@ class _BoardManagerState extends State<BoardManager> {
                                             buttonColor: Colors.transparent,
                                             borderColor: Theme.of(context)
                                                 .primaryTextTheme
-                                                .bodyText2!
+                                                .bodyMedium!
                                                 .color,
                                             height: 45,
                                             radius: 45 / 2,
@@ -1674,7 +1674,7 @@ class _BoardManagerState extends State<BoardManager> {
                                             buttonColor: Colors.transparent,
                                             borderColor: Theme.of(context)
                                                 .primaryTextTheme
-                                                .bodyText2!
+                                                .bodyMedium!
                                                 .color,
                                             height: 45,
                                             radius: 45 / 2,
@@ -1695,7 +1695,7 @@ class _BoardManagerState extends State<BoardManager> {
                                           Theme.of(context).indicatorColor,
                                       buttonColor: Theme.of(context)
                                           .primaryTextTheme
-                                          .bodyText2!
+                                          .bodyMedium!
                                           .color!,
                                       height: 45,
                                       radius: 45 / 2,
@@ -1735,7 +1735,7 @@ class _BoardManagerState extends State<BoardManager> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color:
-                            Theme.of(context).primaryTextTheme.bodyText2!.color,
+                            Theme.of(context).primaryTextTheme.bodyMedium!.color,
                         fontFamily: 'Klavika',
                         package: 'css',
                         fontSize: 20,
@@ -1756,7 +1756,7 @@ class _BoardManagerState extends State<BoardManager> {
                           buttonColor: Colors.transparent,
                           borderColor: Theme.of(context)
                               .primaryTextTheme
-                              .bodyText2!
+                              .bodyMedium!
                               .color,
                           height: 45,
                           radius: 45 / 2,
@@ -1776,7 +1776,7 @@ class _BoardManagerState extends State<BoardManager> {
                           textColor: Theme.of(context).indicatorColor,
                           buttonColor: Theme.of(context)
                               .primaryTextTheme
-                              .bodyText2!
+                              .bodyMedium!
                               .color!,
                           height: 45,
                           radius: 45 / 2,
@@ -1911,7 +1911,7 @@ class _BoardManagerState extends State<BoardManager> {
                                 color: color,
                                 fontFamily: Theme.of(context)
                                     .primaryTextTheme
-                                    .bodyText2!
+                                    .bodyMedium!
                                     .fontFamily,
                                 decoration: TextDecoration.none),
                             controller: controller,
@@ -1938,7 +1938,7 @@ class _BoardManagerState extends State<BoardManager> {
                               size: 20,
                               color: Theme.of(context)
                                   .primaryTextTheme
-                                  .bodyText2!
+                                  .bodyMedium!
                                   .color,
                             ),
                           )
@@ -1950,7 +1950,7 @@ class _BoardManagerState extends State<BoardManager> {
                       width: width - 20,
                       child: Text(
                         subtitle,
-                        style: Theme.of(context).primaryTextTheme.bodyText2,
+                        style: Theme.of(context).primaryTextTheme.bodyMedium,
                       ),
                     ),
             )
@@ -2076,7 +2076,7 @@ class _BoardManagerState extends State<BoardManager> {
                     "Please Enter the name of the Board!",
                     style: TextStyle(
                         color:
-                            Theme.of(context).primaryTextTheme.bodyText2!.color,
+                            Theme.of(context).primaryTextTheme.bodyMedium!.color,
                         fontFamily: 'Klavika',
                         package: 'css',
                         fontSize: 20,
@@ -2101,7 +2101,7 @@ class _BoardManagerState extends State<BoardManager> {
                         style: TextStyle(
                             color: Theme.of(context)
                                 .primaryTextTheme
-                                .bodyText2!
+                                .bodyMedium!
                                 .color,
                             fontFamily: 'Klavika',
                             package: 'css',
@@ -2140,7 +2140,7 @@ class _BoardManagerState extends State<BoardManager> {
                           buttonColor: Colors.transparent,
                           borderColor: Theme.of(context)
                               .primaryTextTheme
-                              .bodyText2!
+                              .bodyMedium!
                               .color,
                           height: 45,
                           radius: 45 / 2,
@@ -2180,7 +2180,7 @@ class _BoardManagerState extends State<BoardManager> {
                           textColor: Theme.of(context).indicatorColor,
                           buttonColor: Theme.of(context)
                               .primaryTextTheme
-                              .bodyText2!
+                              .bodyMedium!
                               .color!,
                           height: 45,
                           radius: 45 / 2,

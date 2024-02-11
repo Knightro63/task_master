@@ -194,7 +194,7 @@ class _ProjectManagerState extends State<ProjectManager> {
               Text(
                 'Created By: ',
                 style: TextStyle(
-                    color: Theme.of(context).primaryTextTheme.subtitle1!.color,
+                    color: Theme.of(context).primaryTextTheme.titleSmall!.color,
                     fontFamily: 'Klavika Bold',
                     package: 'css',
                     fontSize: 14),
@@ -212,7 +212,7 @@ class _ProjectManagerState extends State<ProjectManager> {
               Text(
                 'Date Created: ',
                 style: TextStyle(
-                    color: Theme.of(context).primaryTextTheme.subtitle1!.color,
+                    color: Theme.of(context).primaryTextTheme.titleSmall!.color,
                     fontFamily: 'Klavika Bold',
                     package: 'css',
                     fontSize: 14),
@@ -233,7 +233,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                       style: TextStyle(
                           color: Theme.of(context)
                               .primaryTextTheme
-                              .subtitle1!
+                              .titleSmall!
                               .color,
                           fontFamily: 'Klavika Bold',
                           package: 'css',
@@ -282,7 +282,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                             color: color,
                             fontFamily: Theme.of(context)
                                 .primaryTextTheme
-                                .bodyText2!
+                                .bodyMedium!
                                 .fontFamily,
                             decoration: TextDecoration.none)),
                     InkWell(
@@ -296,7 +296,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                         Icons.delete_forever,
                         size: 20,
                         color:
-                            Theme.of(context).primaryTextTheme.bodyText2!.color,
+                            Theme.of(context).primaryTextTheme.bodyMedium!.color,
                       ),
                     )
                   ],
@@ -423,7 +423,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                     pickerAreaHeightPercent: 0.7,
                     portraitOnly: true,
                     enableAlpha: false,
-                    labelTypes: [],
+                    labelTypes: const [],
                     pickerAreaBorderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -462,7 +462,7 @@ class _ProjectManagerState extends State<ProjectManager> {
   Widget projectName() {
     return StatefulBuilder(builder: (context, setState) {
       // Creates handles the date picker for the project due date
-      void _selectDate(BuildContext context) async {
+      void selectDate(BuildContext context) async {
         final DateTime? picked = await showDatePicker(
           context: context,
           initialDate: selectedDate.isBefore(DateTime.now())
@@ -503,7 +503,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                     "Please Enter the name of the story!",
                     style: TextStyle(
                         color:
-                            Theme.of(context).primaryTextTheme.bodyText2!.color,
+                            Theme.of(context).primaryTextTheme.bodyMedium!.color,
                         fontFamily: 'Klavika',
                         package: 'css',
                         fontSize: 20),
@@ -515,7 +515,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                         style: TextStyle(
                             color: Theme.of(context)
                                 .primaryTextTheme
-                                .bodyText2!
+                                .bodyMedium!
                                 .color,
                             fontFamily: 'Klavika',
                             package: 'css',
@@ -547,7 +547,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                           TextStyle(
                               color: Theme.of(context)
                                   .primaryTextTheme
-                                  .bodyText2!
+                                  .bodyMedium!
                                   .color,
                               fontFamily: 'Klavika',
                               package: 'css',
@@ -556,7 +556,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                           20),
                       InkWell(
                           onTap: () {
-                            _selectDate(context);
+                            selectDate(context);
                           },
                           child: SizedBox(
                             child: Text(
@@ -566,7 +566,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                               style: TextStyle(
                                   color: Theme.of(context)
                                       .primaryTextTheme
-                                      .bodyText2!
+                                      .bodyMedium!
                                       .color,
                                   fontFamily: 'Klavika',
                                   package: 'css',
@@ -604,7 +604,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                           buttonColor: Colors.transparent,
                           borderColor: Theme.of(context)
                               .primaryTextTheme
-                              .bodyText2!
+                              .bodyMedium!
                               .color,
                           height: 45,
                           radius: 45 / 2,
@@ -627,7 +627,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                                 textColor: Theme.of(context).indicatorColor,
                                 buttonColor: Theme.of(context)
                                     .primaryTextTheme
-                                    .bodyText2!
+                                    .bodyMedium!
                                     .color!,
                                 height: 45,
                                 radius: 45 / 2,
@@ -679,7 +679,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                           textColor: Theme.of(context).indicatorColor,
                           buttonColor: Theme.of(context)
                               .primaryTextTheme
-                              .bodyText2!
+                              .bodyMedium!
                               .color!,
                           height: 45,
                           radius: 45 / 2,
@@ -726,7 +726,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                         fontSize: 24,
                         color: Theme.of(context)
                             .primaryTextTheme
-                            .subtitle2!
+                            .titleMedium!
                             .color),
                   ),
                 )));
@@ -794,7 +794,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                                 style: TextStyle(
                                     color: Theme.of(context)
                                         .primaryTextTheme
-                                        .bodyText2!
+                                        .bodyMedium!
                                         .color,
                                     fontFamily: 'Klavika',
                                     package: 'css',
@@ -848,7 +848,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                                   buttonColor: Colors.transparent,
                                   borderColor: Theme.of(context)
                                       .primaryTextTheme
-                                      .bodyText2!
+                                      .bodyMedium!
                                       .color,
                                   height: 45,
                                   radius: 45 / 2,
@@ -859,9 +859,9 @@ class _ProjectManagerState extends State<ProjectManager> {
                                     : squareButton(
                                         text: 'delete',
                                         onTap: () {
-                                          if (widget.onDeleteLabel != null)
-                                            widget
-                                                .onDeleteLabel!(selectedLabel);
+                                          if (widget.onDeleteLabel != null){
+                                            widget.onDeleteLabel!(selectedLabel);
+                                          }
 
                                           setState(() {
                                             labelNameController.text = '';
@@ -875,7 +875,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                                             Theme.of(context).indicatorColor,
                                         buttonColor: Theme.of(context)
                                             .primaryTextTheme
-                                            .bodyText2!
+                                            .bodyMedium!
                                             .color!,
                                         height: 45,
                                         radius: 45 / 2,
@@ -919,7 +919,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                                   textColor: Theme.of(context).indicatorColor,
                                   buttonColor: Theme.of(context)
                                       .primaryTextTheme
-                                      .bodyText2!
+                                      .bodyMedium!
                                       .color!,
                                   height: 45,
                                   radius: 45 / 2,
@@ -983,7 +983,7 @@ class _ProjectManagerState extends State<ProjectManager> {
               offset: Offset(width - 35 - 20, 30),
               allowed: widget.allowEditing,
               color: Theme.of(context).cardColor,
-              iconColor: Theme.of(context).primaryTextTheme.subtitle2!.color!,
+              iconColor: Theme.of(context).primaryTextTheme.titleMedium!.color!,
               icon: Icons.label,
               onTap: () {
                 setState(() {

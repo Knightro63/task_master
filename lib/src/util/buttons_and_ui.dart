@@ -445,7 +445,7 @@ class TopInfo extends StatelessWidget {
               ),
             )
           : Container(),
-      Text('$title:  ', style: Theme.of(context).primaryTextTheme.headline2),
+      Text('$title:  ', style: Theme.of(context).primaryTextTheme.headlineMedium),
       (titleWidget != null) ? titleWidget! : Container()
     ];
     return Container(
@@ -483,7 +483,7 @@ class TopInfo extends StatelessWidget {
                       width: responsive2(),
                       child: Text(info,
                           textAlign: TextAlign.justify,
-                          style: Theme.of(context).primaryTextTheme.bodyText2),
+                          style: Theme.of(context).primaryTextTheme.bodySmall),
                     ),
                     const SizedBox(height: 10)
                   ])

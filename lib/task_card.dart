@@ -168,7 +168,7 @@ class CreateTaskCard extends StatelessWidget {
                   fontFamily: 'MuseoSans',
                   package: 'css',
                   fontSize: 10,
-                  color: Theme.of(context).primaryTextTheme.subtitle1!.color,
+                  color: Theme.of(context).primaryTextTheme.titleSmall!.color,
                   decoration: TextDecoration.none),
               15));
           toReturn.add(const SizedBox(width: 5));
@@ -208,7 +208,7 @@ class CreateTaskCard extends StatelessWidget {
             width: 10,
             height: 10,
             decoration: BoxDecoration(
-                color: Theme.of(context).primaryTextTheme.subtitle1!.color,
+                color: Theme.of(context).primaryTextTheme.titleSmall!.color,
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
                 border: Border.all(width: 2.5, color: getColor())),
           )
@@ -253,7 +253,7 @@ class CreateTaskCard extends StatelessWidget {
                                 style: TextStyle(
                                     color: Theme.of(context)
                                         .primaryTextTheme
-                                        .subtitle1!
+                                        .titleSmall!
                                         .color,
                                     fontSize: 12,
                                     fontFamily: 'Klavika Bold',
@@ -264,7 +264,7 @@ class CreateTaskCard extends StatelessWidget {
                     (cardData.points == 0) ? '' : cardData.points.toString(),
                     style: TextStyle(
                         color:
-                            Theme.of(context).primaryTextTheme.subtitle1!.color,
+                            Theme.of(context).primaryTextTheme.titleSmall!.color,
                         fontSize: 12,
                         fontFamily: 'Klavika Bold',
                         package: 'css',
