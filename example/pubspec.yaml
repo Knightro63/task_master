@@ -15,7 +15,7 @@ dependencies:
   intl: ^0.19.0
   cupertino_icons: ^1.0.2
 
-  task_master:
+  task_manager:
     path: ../
   css:
     git:

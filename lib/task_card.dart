@@ -67,8 +67,7 @@ class CreateTaskCard extends StatelessWidget {
       if (cardData.labels != null) {
         for (String key in cardData.labels!.keys) {
           label.add(Container(
-            width:
-                20, //(cardData.labels![key]['name'].length*6.0 < 120)?cardData.labels![key]['name'].length*6.0:120,
+            width: 20, //(cardData.labels![key]['name'].length*6.0 < 120)?cardData.labels![key]['name'].length*6.0:120,
             height: 7,
             margin: const EdgeInsets.all(5),
             alignment: Alignment.center,
@@ -117,10 +116,7 @@ class CreateTaskCard extends StatelessWidget {
         date,
         '',
         (cardData.comments != null) ? cardData.comments!.length.toString() : '',
-        '${complete.toString()}/' +
-            ((cardData.checkList != null)
-                ? cardData.checkList!.length.toString()
-                : '')
+        '$complete/${((cardData.checkList != null)? cardData.checkList!.length: '')}'
       ];
       List<IconData> ico = [
         Icons.access_time,

@@ -84,10 +84,10 @@ class ProjectManager extends StatefulWidget {
   final dynamic labels;
 
   @override
-  _ProjectManagerState createState() => _ProjectManagerState();
+  ProjectManagerState createState() => ProjectManagerState();
 }
 
-class _ProjectManagerState extends State<ProjectManager> {
+class ProjectManagerState extends State<ProjectManager> {
   String assignedDate = '';
   String selectedProject = '';
   String editProject = '';
@@ -693,6 +693,7 @@ class _ProjectManagerState extends State<ProjectManager> {
 
   /// Widget for label creation/editing dialog
   Widget createLabel() {
+    double maxWidth = MediaQuery.of(context).size.width;
     return StatefulBuilder(builder: (context, setState) {
       List<Widget> allLabels() {
         List<Widget> labels = [];
@@ -710,7 +711,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                 },
                 child: Container(
                   height: 30,
-                  width: responsive() - 30,
+                  width: responsive(width:maxWidth) - 30,
                   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                   margin: const EdgeInsets.fromLTRB(0, 0, 0, 5),
                   alignment: Alignment.center,
@@ -748,7 +749,7 @@ class _ProjectManagerState extends State<ProjectManager> {
               height: (hmLabels * 35.0 > deviceHeight - 50)
                   ? deviceHeight - 50
                   : hmLabels * 35.0 + 260,
-              width: responsive() + 20,
+              width: responsive(width:maxWidth) + 20,
               alignment: Alignment.center,
               child: ListView(
                 padding: const EdgeInsets.all(0),
@@ -758,12 +759,11 @@ class _ProjectManagerState extends State<ProjectManager> {
                     height: (hmLabels * 35.0 > deviceHeight - 50)
                         ? deviceHeight - 50
                         : hmLabels * 35.0 + 260,
-                    width: responsive(),
+                    width: responsive(width:maxWidth),
                     //alignment: Alignment.center,
                     decoration: BoxDecoration(
                         color: Theme.of(context).cardColor,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black,
@@ -778,7 +778,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                               height: (hmLabels * 35.0 > deviceHeight - 260)
                                   ? deviceHeight - 260.0
                                   : hmLabels * 35.0,
-                              width: responsive() - 20,
+                              width: responsive(width:maxWidth) - 20,
                               child: ListView(
                                   padding: const EdgeInsets.all(0),
                                   children: allLabels())),
@@ -801,7 +801,7 @@ class _ProjectManagerState extends State<ProjectManager> {
                                     fontSize: 20),
                               ),
                               EnterTextFormField(
-                                width: responsive() - 120,
+                                width: responsive(width:maxWidth) - 120,
                                 height: 35,
                                 color: Theme.of(context).canvasColor,
                                 maxLines: 1,

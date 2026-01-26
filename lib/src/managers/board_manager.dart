@@ -112,10 +112,10 @@ class BoardManager extends StatefulWidget {
   final UserData currentUser;
 
   @override
-  _BoardManagerState createState() => _BoardManagerState();
+  BoardManagerState createState() => BoardManagerState();
 }
 
-class _BoardManagerState extends State<BoardManager> {
+class BoardManagerState extends State<BoardManager> {
   double width = 100;
   double height = 100;
   double cardHeight = 61;
@@ -267,14 +267,14 @@ class _BoardManagerState extends State<BoardManager> {
         cardNameControllers[2].text = cardData[i].points.toString();
       }
       if (cardData[i].assigned.isNotEmpty) {
-        cardData[i].assigned.forEach((element) {
-          assigned.add(element);
-        });
+        for(int k = 0; k < cardData[i].assigned.length;k++){
+          assigned.add(cardData[i].assigned[k]);
+        }
       }
       if (cardData[i].editors.isNotEmpty) {
-        cardData[i].editors.forEach((element) {
-          editors.add(element);
-        });
+        for(int k = 0; k < cardData[i].editors.length;k++){
+          editors.add(cardData[i].editors[k]);
+        }
       } else if (cardData[i].editors.isEmpty) {
         String? createdBy = (isNewCard)
             ? widget.currentUser.uid

@@ -69,7 +69,7 @@ class EnterTextFormField extends StatelessWidget {
           inputFormatters: inputFormatters,
           controller: controller,
           style: (textStyle == null)
-              ? Theme.of(context).primaryTextTheme.bodyText2
+              ? Theme.of(context).primaryTextTheme.bodyMedium
               : textStyle,
           decoration: InputDecoration(
               isDense: true,

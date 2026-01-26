@@ -1,4 +1,4 @@
-name: task_master
+name: task_manager
 description: A Flutter package to help you implement a feature-rich task management system into your application
 version: 0.0.1
 homepage: https://github.com/Knightro63/task_master

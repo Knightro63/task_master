@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   dynamic users;
   dynamic labels;
   dynamic completeData;
-  Size size = Size(0,0);
+  Size size = const Size(0,0);
 
   @override
   void initState() {

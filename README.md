@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-# Task Master
+# Task Manager
 
 Use this package to implement a task management system in your Flutter application.
 
